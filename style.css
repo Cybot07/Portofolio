@@ -1,0 +1,222 @@
+/* ====== GLOBAL STYLE ====== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* ====== HEADER ====== */
+header {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    text-align: center;
+    padding: 50px 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #00ff80;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #e2e2e2;
+}
+
+/* ====== MAIN CONTENT ====== */
+main {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 128, 0.2);
+    border-radius: 10px;
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 1100px;
+    box-shadow: 0 0 25px rgba(0, 255, 128, 0.15);
+}
+
+/* ====== SECTION ====== */
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    color: #00ff80;
+    border-bottom: 2px solid #00ff80;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* ====== TENTANG SAYA ====== */
+.tentang-saya {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 0 15px rgba(0, 255, 128, 0.15);
+    flex-wrap: wrap;
+}
+
+/* Foto Profil */
+.foto-profil {
+    flex: 1;
+    text-align: center;
+    animation: fadeInLeft 1s ease forwards;
+    opacity: 0;
+}
+
+.foto-profil img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #00ff80;
+    box-shadow: 0 0 20px rgba(0, 255, 128, 0.3);
+    transition: all 0.3s ease;
+}
+
+.foto-profil img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 255, 128, 0.5);
+}
+
+/* Deskripsi */
+.deskripsi {
+    flex: 2;
+    color: #e2e2e2;
+    animation: fadeInRight 1s ease forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+.deskripsi h2 {
+    color: #00ff80;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #00ff80;
+    display: inline-block;
+}
+
+/* ====== ANIMASI ====== */
+@keyframes fadeInLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* ====== FLEXBOX (Pendidikan & Pekerjaan) ====== */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.kolom {
+    flex: 1;
+    min-width: 320px;
+    background-color: #1f1f1f;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 128, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kolom:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 255, 128, 0.3);
+}
+
+.kolom h3 {
+    margin-bottom: 5px;
+    color: #00cc99;
+}
+
+.kolom ul {
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+/* ====== BUTTON ====== */
+button {
+    background-color: #00ff80;
+    color: #000;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    background-color: #00cc66;
+    transform: scale(1.05);
+}
+
+/* ====== FOOTER ====== */
+footer {
+    background-color: #1f1f1f;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+    margin-top: 40px;
+    color: #aaa;
+}
+
+footer strong {
+    color: #00ff80;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .tentang-saya {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .foto-profil img {
+        width: 180px;
+        height: 180px;
+        margin-bottom: 15px;
+    }
+
+    .deskripsi {
+        text-align: justify;
+    }
+
+    .flex-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
