@@ -19,7 +19,3 @@ Dikembangkan dengan struktur yang sederhana, ringan, dan responsif agar bisa dia
 - **CSS3** — Tampilan dan animasi UI
 - **JavaScript (Vanilla JS)** — Interaktivitas (toggle sertifikasi)
 - **GitHub Pages** — Hosting gratis untuk deployment website
-
----
-
-## 📁 Struktur Folder
